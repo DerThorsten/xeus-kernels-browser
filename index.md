@@ -52,6 +52,14 @@ img[alt~="center"] {
 
 ---
 
+# Outline
+ 
+* Jupyter architecture
+* Xeus
+* JupyterLite
+* Xeus-lite
+---
+
 # Jupyter architecture
 
 ![h:400px center](https://xeus.readthedocs.io/en/latest/_images/jupyter_archi.svg)
@@ -235,19 +243,145 @@ cookiecutter https://github.com/jupyter-xeus/xeus-cookiecutter
 ![h:500px center](img/zmq_piecewise/zmq0.svg)
 
 
+---
+
+![bg contain](img/webassembly-ar21.svg)
+
 
 ---
 
-# Architecture of xeus (before)
+# WebAssembly allows to run native code in the browser.
 
-![h:500px center](img/xeus_archi_previous.svg)
+<style scoped>
+{
+   font-size: 1.4rem;
+}
+</style>
+
+<!-- <div class="grid grid-cols-2 gap-4"> -->
+
+<!-- A 2X2 GRID -->
+<div class="grid grid-cols-2 grid-auto-rows gap-4">
+
+
+<div>
+
+  Python:
+  ![width:34px](img/github-mark.svg) [github.com/pyodide/pyodide](https://github.com/pyodide/pyodide)
+
+  * python distribution compiled to WebAssembly
+  * runs in the browser
+  * includes numpy, pandas, matplotlib, etc...
+
+</div>
+<div>
+
+R-Lang:
+![width:34px](img/github-mark.svg)[github.com/r-wasm/webr](https://github.com/r-wasm/webr):
+ * R interpreter compiled to WebAssembly
+ * runs in the browser
+ * includes packages compiled to WebAssembly
+
+</div>
+<div>
+
+  Doom:
+  ![width:34px](img/github-mark.svg) [github.com/cloudflare/doom-wasm](https://github.com/cloudflare/doom-wasm)
+  ![height:150px](img/doom.gif)
+
+</div>
+
+<div>
+
+  x86 emulator:  
+  ![width:34px](img/github-mark.svg) [https://github.com/copy/v86](https://https://github.com/copy/v86)
+  ![height:150px](img/Windows2000_desktop.png)
+
+</div>
+
+</div>
+
+---
+<style>section { justify-content: start; }</style>
+
+# Usage of Jupyter Kernels from JupyterLite
+
+![bg contain](img/jlite.svg)
+
+
+---
+![height:120px](img/jlite.svg)
+
+  * ![h:30px](img/github-mark.svg) [github.com/jupyterlite/jupyterlite](https://github.com/jupyterlite/jupyterlite)
+  * JupyterLab distribution that runs entirely in the browser 
+  * Wasm powered kernels running in the browser
+
+
+---
+<iframe
+src="https://jupyterlite.github.io/demo/lab/index.html"
+width="100%"
+height="500px"
+>
+</iframe>
+
+
+---
+
+#  JupyterLite
+
+<iframe
+  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=lua&toolbar=1"
+  width="100%"
+  height="500px"
+>
+</iframe>
+
+--- 
+
+<style>section { justify-content: start; }</style>
+
+# XeusLite: Xeus kernels for JupyterLite
+
+![h:500px center](img/xeuslite.webp)
+
+---
+
+# Architecture of xeus
+
+![bg fit right](img/xeus_archi_previous.svg)
+
+* ![h:30px](img/github-mark.svg) [github.com/jupyter-xeus/xeus](https://github.com/jupyter-xeus/xeus)
+* Customizable via
+    
+    * Custom Interpreter
+    * Custom Debugger
+    * Custom Server
+  
+* Hard coded to use ZeroMQ
+  
+    * ZeroMQ is not availalbe when compiling for Wasm
 
 
 ---
 
 # Architecture of xeus (now)
 
-![h:500px center](img/xeus_archi.svg)
+![bg fit right](img/xeus_archi.svg)
+<style scoped>
+li {
+   font-size: 0.89rem;
+}
+</style>
+
+
+
+* Make xeus agnostic to the communication layer
+* Extract `zmq` based server in dedicated package:
+  ![h:30px](img/github-mark.svg) [github.com/jupyter-xeus/xeus-zmq](https://github.com/jupyter-xeus/xeus-zmq)
+
+* Implement Server with `wasm` compatible communication layer:
+  ![h:30px](img/github-mark.svg) [github.com/jupyter-xeus/xeus-lite](github.com/jupyter-xeus/xeus-liteZ)
 
 
 
