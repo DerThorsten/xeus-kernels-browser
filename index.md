@@ -263,26 +263,6 @@ cookiecutter https://github.com/jupyter-xeus/xeus-cookiecutter
 <!-- A 2X2 GRID -->
 <div class="grid grid-cols-2 grid-auto-rows gap-4">
 
-
-<div>
-
-  Python:
-  ![width:34px](img/github-mark.svg) [github.com/pyodide/pyodide](https://github.com/pyodide/pyodide)
-
-  * python distribution compiled to WebAssembly
-  * runs in the browser
-  * includes numpy, pandas, matplotlib, etc...
-
-</div>
-<div>
-
-R-Lang:
-![width:34px](img/github-mark.svg)[github.com/r-wasm/webr](https://github.com/r-wasm/webr):
- * R interpreter compiled to WebAssembly
- * runs in the browser
- * includes packages compiled to WebAssembly
-
-</div>
 <div>
 
   Doom:
@@ -298,13 +278,33 @@ R-Lang:
   ![height:150px](img/Windows2000_desktop.png)
 
 </div>
+<div>
+
+  Python:
+  ![width:34px](img/github-mark.svg) [github.com/pyodide/pyodide](https://github.com/pyodide/pyodide)
+
+  * python distribution compiled to WebAssembly
+  * runs in the browser
+  * includes numpy, pandas, matplotlib, etc...
+  *  **write wasm kernels**
+
+</div>
+<div>
+
+R-Lang:
+![width:34px](img/github-mark.svg)[github.com/r-wasm/webr](https://github.com/r-wasm/webr):
+ * R interpreter compiled to WebAssembly
+ * runs in the browser
+ * includes packages compiled to WebAssembly
+*  **write wasm kernels**
+
+</div>
+
 
 </div>
 
 ---
 <style>section { justify-content: start; }</style>
-
-# Usage of Jupyter Kernels from JupyterLite
 
 ![bg contain](img/jlite.svg)
 
