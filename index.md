@@ -44,8 +44,7 @@ img[alt~="center"] {
 
 - Scientific Software Developer at QuantStack
 - Co-authored the emscripten-forge stack
-- Co-authored OpenGM2, author of Nifty
-- Contributor to VIGRA, a generic image processing library
+- Contributor to many open-source projects 
 
 </div>
 </div>
@@ -137,14 +136,13 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 
   ![height:115px](img/xeus-octave-logo.svg) ![height:115px](img/native-octave-plots.png)
   ![height:115px](img/xeus-qt-logo.svg) ![height:115px](img/xeus-qt-gif.gif)
+
   </div>
   <div>
 
   ![height:115px](img/xeus-nelson-logo.svg) ![height:115px](img/nelson.png)
   ![height:115px](img/3DSlicerLogo-HorizontalF.svg) ![height:115px](img/youtube-video-gif.gif)
    
-   
-
   </div>
   <div>
 
@@ -383,50 +381,100 @@ li {
 * Implement Server with `wasm` compatible communication layer:
   ![h:30px](img/github-mark.svg) [github.com/jupyter-xeus/xeus-lite](github.com/jupyter-xeus/xeus-liteZ)
 
+---
 
+# Usage of Xeus Kernels with JupyterLite
+
+![h:500px center](img/wasm_piecewise/wasm7.svg)
 
 ---
 
 # Usage of Xeus Kernels with JupyterLite
 
-![h:500px center](img/wasm.svg)
+![h:500px center](img/wasm_piecewise/wasm6.svg)
+
+---
+
+# Usage of Xeus Kernels with JupyterLite
+
+![h:500px center](img/wasm_piecewise/wasm5.svg)
+
+---
+
+# Usage of Xeus Kernels with JupyterLite
+
+![h:500px center](img/wasm_piecewise/wasm4.svg)
+
+---
+
+# Usage of Xeus Kernels with JupyterLite
+
+![h:500px center](img/wasm_piecewise/wasm3.svg)
+
+---
+
+# Usage of Xeus Kernels with JupyterLite
+
+![h:500px center](img/wasm_piecewise/wasm2.svg)
+
+---
+
+# Usage of Xeus Kernels with JupyterLite
+
+![h:500px center](img/wasm_piecewise/wasm1.svg)
+
+---
+
+# Usage of Xeus Kernels with JupyterLite
+
+![h:500px center](img/wasm_piecewise/wasm0.svg)
+
 
 
 --- 
-# Xeus Lite Kernels
+# Examples of Xeus-Lite Kernels
 
-<div class="grid grid-cols-3 gap-4">
+
+<div class="grid grid-cols-2 grid-rows-auto gap-4">
+
 <div>
 
-![width:200px](img/xeus-lua-logo.svg) 
-![width:200px](img/xeus-wren-logo.svg) 
+![width:200px](img/xeus-python-logo.svg) ![width:200px](img/python_gif.gif)
 
 </div>
 <div>
 
-![width:200px](img/xeus-python-logo.svg)
-![width:200px](img/xeus-nelson-logo.svg)
+![width:200px](img/xeus-lua-logo.svg)  ![width:200px](img/lua.gif)
+
+</div>
 
 
 
-
-
-
---- 
-# Examples
-
-
-<div class="grid grid-cols-3 gap-4">
 <div>
 
-![width:200px](img/xeus-lua-logo.svg)  ![width:200px](img/lua.gif)
+![width:200px](img/xeus-sqlite-logo.svg) ![width:200px](img/xeus-sqlite-screenshot.png)
+
+</div>
+
+<div>
+
 ![width:200px](img/xeus-wren-logo.svg) ![width:200px](img/wren_gif.gif)
 
 </div>
 <div>
 
-![width:200px](img/xeus-python-logo.svg) ![width:200px](img/python_gif.gif)
 ![width:200px](img/xeus-nelson-logo.svg)
 
+</div>
+
+</div>
 
 
+----
+
+# Outlook
+
+ * implement more xeus-lite kernels:
+    * xeus-cling
+    * xeus-r 
+ *  improve testing for xeus-lite kernels
