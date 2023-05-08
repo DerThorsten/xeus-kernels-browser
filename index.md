@@ -1,12 +1,11 @@
 ---
 marp: true
-theme: default
+theme: default  
 paginate: true
 header: ![height:40px](https://quantstack.net/img/logo.svg)
 footer: ![height:20px](img/twitter.svg) ![height:20px](img/github.svg) @JohanMabille @ThorstenBeier @QuantStack
 style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 ---
-
 <style>
 section::after {
   content: attr(data-marpit-pagination) '/' attr(data-marpit-pagination-total);
@@ -16,6 +15,7 @@ img[alt~="center"] {
   margin: 0 auto;
 }
 </style>
+
 
 ![bg fit right:30%](https://jupyter.org/assets/homepage/main-logo.svg)
 
@@ -61,29 +61,6 @@ img[alt~="center"] {
 
 ---
 
-# Writing kernels for Jupyter
-
-- Write from scratch in your favorite language
-- Adopt the kernel wrapper approach, based on ipykernel
-- Build upon xeus, a native implementation of the protocol
-
----
-
-# The xeus galaxy
-
-- xeus: a native implementation of the Jupyter Kernel Protocol
-- xeus + interpreter + glue code = Jupyter kernel
-- xeus-cling (C++), xeus-python, xeus-sql, xeus-lua, etc...
-- xwidgets: a native backend for the Jupyter interactive widgets
-
----
-
-# Implementing a kernel
-
-![bg fit right](img/echo-kernel.png)
-
----
-
 # The Jupyter kernel protocol
 
 Clients and kernels communicate (over the network) through 5 channels:
@@ -95,14 +72,227 @@ Clients and kernels communicate (over the network) through 5 channels:
 
 ZeroMQ provides the low-level transport layer over which the messages are sent.
 
+
+---
+
+# Writing kernels for Jupyter
+
+- Write from scratch in your favorite language
+- Adopt the kernel wrapper approach, based on ipykernel
+- Build upon xeus, a native implementation of the protocol
+
+---
+
+# Xeus
+
+- xeus is C++ library which simplifies the implementation of kernels for Jupyter
+- developers can focus on implementing the interpreter part of the kernel
+- xeus provides the glue code to connect the interpreter to the Jupyter protocol
+
+
+
+--- 
+# The Xeus Universe
+
+
+<div class="grid grid-cols-3 gap-4">
+
+  <div>
+
+  ![height:115px](img/xeus-python-logo.svg) ![height:115px](img/python_gif.gif)
+  ![height:115px](img/xeus-sql-logo.svg) ![height:115px](img/xeus-sql-screencast.gif)
+  </div>
+  <div>
+
+  ![height:115px](img/xeus-cling.svg) ![height:115px](img/xeus-cling-screenshot.png)
+  ![height:115px](img/xeus-sqlite-logo.svg) ![height:115px](img/xeus-sqlite-screenshot.png)
+
+
+  </div>
+  <div>
+
+  ![height:115px](img/xeus-lua-logo.svg)  ![height:115px](img/lua.gif)
+  ![height:115px](img/xeus-robot.svg) ![height:115px](img/robo_gif.gif)
+  
+  </div>
+
+</div>
+
+---
+
+# The Xeus Universe
+
+
+<div class="grid grid-cols-3 gap-4">
+
+  <div>
+
+  ![height:115px](img/xeus-octave-logo.svg) ![height:115px](img/native-octave-plots.png)
+  ![height:115px](img/xeus-qt-logo.svg) ![height:115px](img/xeus-qt-gif.gif)
+  </div>
+  <div>
+
+  ![height:115px](img/xeus-nelson-logo.svg) ![height:115px](img/nelson.png)
+  ![height:115px](img/3DSlicerLogo-HorizontalF.svg) ![height:115px](img/youtube-video-gif.gif)
+   
+   
+
+  </div>
+  <div>
+
+  ![height:115px](img/xeus-wren-logo.svg) ![height:115px](img/wren_gif.gif)
+  ![height:115px](img/xeus-cookiecutter.svg) <br> ![height:115px](img/usage.gif)
+
+  
+  </div>
+
+</div>
+
+
+
+<!-- 
+---
+
+
+# The xeus galaxy
+
+
+
+- xeus: a native implementation of the Jupyter Kernel Protocol
+- xeus + interpreter + glue code = Jupyter kernel
+- xeus-cling (C++), xeus-python, xeus-sql, xeus-lua, etc...
+- xwidgets: a native backend for the Jupyter interactive widgets -->
+
+---
+
+# Implementing a kernel
+
+<style scoped>
+{
+   font-size: 1.5rem;
+}
+</style>
+
+* Start from a cookiecutter template:
+
+
+```
+cookiecutter https://github.com/jupyter-xeus/xeus-cookiecutter
+```
+
+
+* Implement a handfull of methods:
+  * execute request
+  * complete request
+  * inspect request
+  * ...
+
+![bg fit right](img/echo-kernel.png)
+
+
+
+
+
+
+---
+
+# Traditional usage of Jupyter Kernels
+
+![h:500px center](img/zmq_piecewise/zmq5.svg)
+
+
+---
+
+# Traditional usage of Jupyter Kernels
+
+![h:500px center](img/zmq_piecewise/zmq4.svg)
+
+
+---
+
+# Traditional usage of Jupyter Kernels
+
+![h:500px center](img/zmq_piecewise/zmq3.svg)
+
+--- 
+
+# Traditional usage of Jupyter Kernels
+
+![h:500px center](img/zmq_piecewise/zmq2.svg)
+
+
+---
+
+# Traditional usage of Jupyter Kernels
+
+![h:500px center](img/zmq_piecewise/zmq1.svg)
+
+
+---
+
+# Traditional usage of Jupyter Kernels
+
+![h:500px center](img/zmq_piecewise/zmq0.svg)
+
+
+
 ---
 
 # Architecture of xeus (before)
 
 ![h:500px center](img/xeus_archi_previous.svg)
 
+
 ---
 
 # Architecture of xeus (now)
 
 ![h:500px center](img/xeus_archi.svg)
+
+
+
+---
+
+# Usage of Xeus Kernels with JupyterLite
+
+![h:500px center](img/wasm.svg)
+
+
+--- 
+# Xeus Lite Kernels
+
+<div class="grid grid-cols-3 gap-4">
+<div>
+
+![width:200px](img/xeus-lua-logo.svg) 
+![width:200px](img/xeus-wren-logo.svg) 
+
+</div>
+<div>
+
+![width:200px](img/xeus-python-logo.svg)
+![width:200px](img/xeus-nelson-logo.svg)
+
+
+
+
+
+
+--- 
+# Examples
+
+
+<div class="grid grid-cols-3 gap-4">
+<div>
+
+![width:200px](img/xeus-lua-logo.svg)  ![width:200px](img/lua.gif)
+![width:200px](img/xeus-wren-logo.svg) ![width:200px](img/wren_gif.gif)
+
+</div>
+<div>
+
+![width:200px](img/xeus-python-logo.svg) ![width:200px](img/python_gif.gif)
+![width:200px](img/xeus-nelson-logo.svg)
+
+
+
