@@ -243,10 +243,21 @@ cookiecutter https://github.com/jupyter-xeus/xeus-cookiecutter
 
 ---
 
-![bg contain](img/webassembly-ar21.svg)
+![h:300 center](img/webassembly-ar21.svg)
 
+* Wasm is a binary instruction format for a stack-based virtual machine
+* Portable compilation target for programming languages
+* Enabling deployment on the web
 
 ---
+# Emscripten
+![h:200 center](img/emscripten_logo.svg)
+
+
+### Emscripten is a complete compiler toolchain to WebAssembly, using LLVM, with a special focus on speed, size, and the Web platform.
+
+---
+
 
 # WebAssembly allows to run native code in the browser.
 
@@ -314,6 +325,9 @@ R-Lang:
   * JupyterLab distribution that runs entirely in the browser 
   * Wasm powered kernels running in the browser
 
+  * **JupyterCon**: Creating interactive Jupyter websites with JupyterLite: 
+  ![h:30px](img/github-mark.svg)  https://github.com/jtpio/jupytercon-2023-jupyterlite
+
 
 ---
 
@@ -369,7 +383,7 @@ li {
   ![h:30px](img/github-mark.svg) [github.com/jupyter-xeus/xeus-zmq](https://github.com/jupyter-xeus/xeus-zmq)
 
 * Implement Server with `wasm` compatible communication layer:
-  ![h:30px](img/github-mark.svg) [github.com/jupyter-xeus/xeus-lite](github.com/jupyter-xeus/xeus-liteZ)
+  ![h:30px](img/github-mark.svg) [github.com/jupyter-xeus/xeus-lite](github.com/jupyter-xeus/xeus-lite)
 
 ---
 
@@ -505,12 +519,21 @@ height="500px"
 >
 </iframe>
 
+---
+
+# Resources
+
+*  https://github.com/jupyterlite/xeus-python-demo
+
+  ![height:350px center](img/deploy.gif)
 
 ----
 
 # Outlook
-
- * implement more xeus-lite kernels:
-    * xeus-cling
-    * xeus-r 
- *  improve testing for xeus-lite kernels
+  * improve xeus-lite kernels:
+      * dynamic loadinng of conda packages with picomamba
+      * dynamic loading of pip packages with pip
+  * implement more xeus-lite kernels:
+      * xeus-cling
+      * xeus-r 
+  *  improve testing for xeus-lite kernels
