@@ -316,6 +316,7 @@ R-Lang:
 
 
 ---
+
 <iframe
 src="https://jupyterlite.github.io/demo/lab/index.html"
 width="100%"
@@ -323,17 +324,6 @@ height="500px"
 >
 </iframe>
 
-
----
-
-#  JupyterLite
-
-<iframe
-  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=lua&toolbar=1"
-  width="100%"
-  height="500px"
->
-</iframe>
 
 --- 
 
@@ -468,6 +458,52 @@ li {
 </div>
 
 </div>
+
+----
+
+# Applications
+
+## Embed REPL
+```html
+<iframe
+  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=Lua&toolbar=1"
+  width="100%"
+  height="500px"
+>
+</iframe>
+```
+
+----
+## Embed REPL
+
+<iframe
+  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=Lua&toolbar=1"
+  width="100%"
+  height="500px"
+>
+</iframe>
+
+----
+
+## Embed JupyterLite
+
+```html
+<iframe
+src="https://jupyterlite.github.io/demo/lab/index.html"
+width="100%"
+height="500px"
+>
+</iframe>
+```
+---
+## Embed JupyterLite 
+
+<iframe
+src="https://jupyterlite.github.io/demo/lab/index.html"
+width="100%"
+height="500px"
+>
+</iframe>
 
 
 ----
