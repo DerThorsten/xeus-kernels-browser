@@ -51,13 +51,6 @@ img[alt~="center"] {
 
 ---
 
-# Outline
- 
-* Jupyter architecture
-* Xeus
-* JupyterLite
-* Xeus-lite
----
 
 # Jupyter architecture
 
