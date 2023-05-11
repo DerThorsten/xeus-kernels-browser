@@ -51,7 +51,6 @@ img[alt~="center"] {
 
 ---
 
-
 # Jupyter architecture
 
 ![h:400px center](https://xeus.readthedocs.io/en/latest/_images/jupyter_archi.svg)
@@ -85,13 +84,13 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 
 # Xeus
 
-- xeus is C++ library which simplifies the implementation of kernels for Jupyter
+- xeus is a C++ library which simplifies the implementation of kernels for Jupyter
 - developers can focus on implementing the interpreter part of the kernel
-- xeus provides the glue code to connect the interpreter to the Jupyter protocol
-
-
+- Tutorial for creating a kernel based on xeus: https://xeus.readthedocs.io/en/latest/kernel_implementation.html
+- xeus is architetured in components that can be replaced with ad-hoc implementations
 
 --- 
+
 # The Xeus Universe
 
 
@@ -528,9 +527,16 @@ height="500px"
   * implement more xeus-lite kernels:
       * xeus-cpp
       * xeus-r 
-  *  improve testing for xeus-lite kernels
-
+  * improve testing for xeus-lite kernels
+  * ability to generate lite kernels repos from regular kernel repos
+  
 ----
+
+Resources
+
+- Jupyter documentation: https://docs.jupyter.org
+- xeus documentation: https://xeus.readthedocs.io
+- This presentation: https://derthorsten.github.io/xeus-kernels-browser
 
 ----
 
