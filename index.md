@@ -521,9 +521,8 @@ height="500px"
 
 ---
 
-# Resources
-
-*  https://github.com/jupyterlite/xeus-python-demo
+# Deploying Xeus Python
+-  https://github.com/jupyterlite/xeus-python-demo
 
   ![height:350px center](img/deploy.gif)
 
@@ -531,9 +530,15 @@ height="500px"
 
 # Outlook
   * improve xeus-lite kernels:
-      * dynamic loadinng of conda packages with picomamba
+      * dynamic loading of conda packages with mamba
       * dynamic loading of pip packages with pip
   * implement more xeus-lite kernels:
-      * xeus-cling
+      * xeus-cpp
       * xeus-r 
   *  improve testing for xeus-lite kernels
+
+----
+
+----
+
+![bg content](img/katze-kostuem.jpg)
