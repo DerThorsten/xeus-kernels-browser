@@ -341,7 +341,7 @@ height="500px"
 
 ---
 
-# Architecture of xeus
+# Architecture of xeus (old)
 
 ![bg fit right](img/xeus_archi_previous.svg)
 
