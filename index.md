@@ -87,7 +87,7 @@ ZeroMQ provides the low-level transport layer over which the messages are sent.
 - xeus is a C++ library which simplifies the implementation of kernels for Jupyter
 - developers can focus on implementing the interpreter part of the kernel
 - Tutorial for creating a kernel based on xeus: https://xeus.readthedocs.io/en/latest/kernel_implementation.html
-- xeus is architetured in components that can be replaced with ad-hoc implementations
+- xeus is architected in components that can be replaced with ad-hoc implementations
 
 --- 
 
